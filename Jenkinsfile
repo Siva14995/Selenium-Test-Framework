@@ -2,7 +2,7 @@ pipeline {
     agent any  
 
     tools {
-        maven 'maven-3.9.9' 
+        maven '3.9.9' 
     }
 
     stages {
@@ -77,7 +77,7 @@ success {
 
 failure {
     emailext (
-        to: 'testemail@gmail.com',
+        to: 'shankartheknight@gmail.com',
         subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
         body: """
         <html>
